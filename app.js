@@ -1,6 +1,7 @@
-// template_1h3qboi
-// service_osxe6zj
-// OFWbbLksTbZIZ0cT9
+let isModalOpen = false;
+let contrastToggle = false;
+
+// Email Contact Form
 
 function contact() {
   event.preventDefault();
@@ -23,4 +24,26 @@ function contact() {
       "The email servie is temporarily unavailable. Please contact me directly at zachary.c.cuneo@gmail.com"
     );
   })  
+};
+
+// Toggle Contact Me Modal
+
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open")
+  }
+  isModalOpen = true;
+  document.body.classList += " modal--open";
+}
+
+// Toggle Light/Dark Mode
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList += " dark-theme"
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
 }
